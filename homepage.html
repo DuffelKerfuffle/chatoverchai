@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div.scrollmenu {
+        background-color: #1853b3;
+        overflow: auto;
+
+      }
+      
+      div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        text-decoration: none;
+      }
+
+      div.textbox {
+          /*setting alpha = 0.1*/
+          background: rgba(255, 255, 255, 0.5);
+      }
+
+      @font-face { 
+          font-family: STIXTwoText-Regular;  
+          src: url('./TestVideo/static/STIXTwoText-Regular.ttf');
+      } 
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+  </head>
+  <body>
+    <script src="./js/Web1.js"></script>
+    
+    <div class="container-fluid">
+      <div class="row" style = "background-color: #bb8551">
+        <div class="col">
+            <form action="/home">
+                <input class="link" style="width: 425px; height: 35px; margin: 10px 0px; font-size: 24px; background-color:  #bb8551; color:  #2b190d; border: none; font-family: STIXTwoText-Regular; " type="submit" value="Home" style="font-family: STIXTwoText-Regular"/>
+            </form>    
+        </div>
+        <div class="col">
+            <h1 style="font-family: STIXTwoText-Regular; text-align: center; color: #2b190d;">Chat Over Chai</h1>
+        </div>
+        <div class="col">
+            <form action="/about">
+                <input class="link" style="width: 425px; height: 35px; margin: 10px 0px; font-size: 24px; background-color: #bb8551; border: none; color:  #2b190d; font-family: STIXTwoText-Regular" type="submit" value="About" />
+            </form> 
+        </div>
+      </div>
+      <div class="row" style="background-color: #2b190d">
+        <div class="col">
+    
+        </div>
+        <div class="col">       
+            <h1 style="text-align:center; font-family: STIXTwoText-Regular; font-size: 36px; color: #bb8551; margin: 10px 0px; ">Home</h1>
+        </div>
+    
+        <div class="col">
+    
+        </div>
+      </div>
+      <div class="row" style="background-image: url(./images/wallpaper.png)">
+        <div class="col-auto">
+          <form action="/poetry">
+            <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Poetry" />
+          </form>   
+          <form action="/previous">
+             <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Previous" />
+          </form>    
+          <form action="/blog">
+              <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Blog" />
+          </form>  
+          <form action="/upcoming">
+              <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Upcoming" />
+          </form>
+          <form action="/photos">
+              <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Photos" />
+          </form>
+          <form action="/vids">
+              <input class="button" style="width: 300px; height: 35px; margin: 4px 2px; font-family: STIXTwoText-Regular; margin: 4px -10px; background-color: #2b190d; color:#bb8551; border-color: #bb8551" type="submit" value="Videos"/>
+          </form>
+
+          <canvas id="myCanvas" height="500">
+          </canvas>
+        </div>
+        <div class="col" style = "width: 100%">
+          <div class="textbox" style = "height: 300px">
+            <p style="font-family: STIXTwoText-Regular; font-size: 20px; color: #2b190d">Welcome to the Chat Over Chai Website! here you will find out all about our organisation. On this website is our blog, a calendar of our upcoming events, a selection of photos, videos and poetry as well as a list of our previous events.</p>            
+            <img src = "https://drive.google.com/thumbnail?id=1lFTu7rti8qsQoVqOLw6hZQN7FWWMCiKH">
+          </div>
+        </div>
+
+        <div class="col-sm-auto">
+          <canvas id="myCanvas" width = "300">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>  
