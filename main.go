@@ -45,26 +45,38 @@ func main() {
 	r.Use(static.Serve("/TestVideo", static.LocalFile("./TestVideo", true)))
 
 	r.GET("/poetry", func(c *gin.Context) {
+		poetryManager = documents.DocumentManager{}
+		storage.Load(&poetryManager, "poetry")
 		c.HTML(http.StatusOK, "poetry.html", poetryManager)
 	})
 
 	r.GET("/blog", func(c *gin.Context) {
+		blogManager := documents.DocumentManager{}
+		storage.Load(&blogManager, "blog")
 		c.HTML(http.StatusOK, "Blog2.html", blogManager)
 	})
 
 	r.GET("/upcoming", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "upcoming.html", previousManager)
+		upcomingManager := documents.DocumentManager{}
+		storage.Load(&upcomingManager, "upcoming")
+		c.HTML(http.StatusOK, "upcoming.html", upcomingManager)
 	})
 
 	r.GET("/previous", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "previous.html", upcomingManager)
+		previousManager := documents.DocumentManager{}
+		storage.Load(&previousManager, "previous")
+		c.HTML(http.StatusOK, "previous.html", previousManager)
 	})
 
 	r.GET("/photos", func(c *gin.Context) {
+		photoManager := documents.DocumentManager{}
+		storage.Load(&photoManager, "photo")
 		c.HTML(http.StatusOK, "Photos.html", photoManager)
 	})
 
 	r.GET("/vids", func(c *gin.Context) {
+		videoManager := documents.DocumentManager{}
+		storage.Load(&videoManager, "videos")
 		c.HTML(http.StatusOK, "vids.html", videoManager)
 	})
 

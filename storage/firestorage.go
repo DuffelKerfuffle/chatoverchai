@@ -97,7 +97,7 @@ func Remove(c string) {
 		fmt.Println("store5")
 		panic(err)
 	}
-	iter := client.Collection("c").Documents(ctx)
+	iter := client.Collection(c).Documents(ctx)
 	for {
 		count++
 		_, err := iter.Next()
