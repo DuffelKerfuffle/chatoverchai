@@ -1,7 +1,10 @@
 module chatoverchai
 
-module chatoverchai/docs
+go 1.12
 
-module chatoverchai/storage
-
-go 1.14
+require (
+        chatoverchai/docs
+        chatoverchai/storage
+       	"github.com/gin-gonic/contrib/static"
+	      "github.com/gin-gonic/gin"
+)
