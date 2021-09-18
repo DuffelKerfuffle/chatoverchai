@@ -9,7 +9,7 @@
         </style>
     </head>
     
-    <script src="./js/Web1.js"></script>
+    <script src="./js/Web.js"></script>
     <style>
       div.textbox {
         background: rgba(255, 255, 255, 0.5);
@@ -74,18 +74,16 @@
                         <div id = "[[ $i ]]" >    
                             <div class="textbox">
                                 <p style="font-family: STIXTwoText-Regular">[[ .Title ]]</p>
-                                <p style="font-family: STIXTwoText-Regular">[[ .Text ]]</p>
                             </div>
                             <button style="float:left; width: 200px; margin: 6px 2px; font-family: STIXTwoText-Regular; background-color: #2b190d; color:#bb8551; border-color: #bb8551 " onclick= "previous( [[ $i ]] )">Previous Video</button>
                             <button style="float: left; width: 200px; margin: 6px 2px; font-family: STIXTwoText-Regular; background-color: #2b190d; color:#bb8551; border-color: #bb8551" onclick= "next( [[ $i ]] )">Next Video</button>
-                            <iframe src="[[ .MediaSrc ]]" allow="autoplay"></iframe>
+                            <iframe src="[[ .Text ]]" allow="autoplay"></iframe>
                         </div>
                     [[ end ]]
                 </div>
                 <div class="col">               
                 </div>
             </div>
-
         </div>
     </body>
 <html>

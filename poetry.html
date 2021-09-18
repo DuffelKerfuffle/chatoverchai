@@ -8,8 +8,8 @@
             }
         </style>
     </head>
-    
-    <script src="./js/Web1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.4/marked.js"></script>
+    <script src="./js/Web.js"></script>
     <style>
       div.textbox {
         /*setting alpha = 0.1*/
@@ -71,16 +71,17 @@
                     </canvas>
                 </div>
                 <div class="col" >
-                    [[ range .Docs ]]
-                        <div id = "[[ .Title ]]">    
-                            <button class = "button" style="font-family: STIXTwoText-Regular; width: 700px; height: 35px; margin: 4px -10px; border: none; background-color: #2b190d; color:#bb8551; font-size: 22px" onclick= "display( [[ .Title ]] )">[[ .Title ]]</button>
+                    [[ range $num, $val := .Docs ]]
+                        <div id = "[[ $val.Title ]]">    
+                            <button class = "button" style="font-family: STIXTwoText-Regular; width: 700px; height: 35px; margin: 4px -10px; border: none; background-color: #2b190d; color:#bb8551; font-size: 22px" onclick= "display( [[ $val.Title ]] )">[[ $val.Title ]]</button>
                             <div class="textbox" style="display:none">
-                              <p style="font-family: STIXTwoText-Regular; font-size: 20px; color: #2b190d">[[ .Text ]]</p>
+                                <p id = "[[ $val.Title ]]1" style="font-family: STIXTwoText-Regular; font-size: 20px; color: #2b190d">[[ $val.Text ]]</p>
                             </div>
-                            <!--<img style="display: none" src = "./images/[[ .MediaSrc ]].png">-->
-                            <img style="display: none" src = "[[ .MediaSrc ]]">
                         </div>
-                    [[ end ]]
+                        <script>
+                            document.getElementById("[[ $val.Title ]]1").innerHTML = marked(document.getElementById("[[ $val.Title ]]1").innerHTML);
+                        </script>
+                    [[ end ]] 
                 </div>
                 <div class="col"></div>
             </div>
