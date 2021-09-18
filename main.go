@@ -88,10 +88,6 @@ func main() {
 		c.HTML(http.StatusOK, "about.html", nil)
 	})
 
-	r.GET("/test", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "md.html", blogManager)
-	})
-
 	r.GET("/", func(c *gin.Context) {
 		c.Redirect(http.StatusMovedPermanently, "/home")
 	})
